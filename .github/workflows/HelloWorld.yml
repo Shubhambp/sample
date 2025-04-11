@@ -2,8 +2,7 @@ name: "Hello World workflow"
 on:
   push: 
     branches:
-      - master
-      - production
+      - "*"
 jobs:
   Hello-World:
     runs-on: ubuntu-latest
@@ -13,3 +12,6 @@ jobs:
 
       - name: "OS information"
         run: cat /etc/os-release
+
+      - name: "path"
+        run: pwd
